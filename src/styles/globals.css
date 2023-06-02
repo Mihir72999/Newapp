@@ -515,7 +515,7 @@ width:4rem;
     height: auto; 
     width:  auto;
   margin-bottom: 0;
-  scale: 2; 
+  scale: 1.5; 
     /* rotate: 270deg; */
     
   }
@@ -648,7 +648,7 @@ width:4rem;
     height: auto;
 
     width: auto;
-    scale: 2;
+    scale: 1.5;
     margin: 0 auto ;
 
   }
