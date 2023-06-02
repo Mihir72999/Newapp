@@ -2,6 +2,12 @@
     display: none;
     
     }
+
+.button{
+display:block;
+ background:blue;
+ color:white   
+}
     
     @media  (width < 500px) {
         .bottom{
