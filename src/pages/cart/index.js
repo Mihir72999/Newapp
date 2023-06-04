@@ -27,7 +27,7 @@ const cart = () => {
     const dispatch = useDispatch()
     const deleteCart = (e) => {
         dispatch(deletedata(e))
-        const url = `http://localhost:3000/cart?deletedata=${e}`
+        const url = `/cart?deletedata=${e}`
         window.location = url
         toast.info("your item deleted")
     }
