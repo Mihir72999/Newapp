@@ -22,9 +22,7 @@ const actionSlice = createSlice({
         toast.info(`${action.payload.select} added qty 1 in cart`)
 
       }else{
-        toast.warn(`${action.payload.select} already exist`)
-
-      }
+        toast.warn(`${action.payload.select} already exist`)}
      else{
        state.cart.push(action.payload)
       
