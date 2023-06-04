@@ -12,14 +12,12 @@ const brandmodel = ({myData }) => {
 
   const dispatch = useDispatch()
   const {datas} = useSelector(state=>state.model)
-console.log(datas)
+
   const router = useRouter()
 const data = router.query.brandmodel
 const dat = myData.map(e=>e.brandmodel)
 const moredata = dat.includes(data)
-const handleClick = (e) =>{
-  router.push(`products/${e}`)
-}
+
 
 
 return (
@@ -46,7 +44,7 @@ return (
                     <CardContent className={Style.content}>
                       <Typography variant='subtitle2'>{e.name}</Typography>
                     </CardContent>
-                    <Button className={Style.button} onClick={()=>handleClick(e.name)} variant='contained'  size="small" color='primary'>add to cart</Button>
+                   <Link href={`/products/${e.name}`}>  <Button className={Style.button}  variant='contained'  size="small" color='primary'>add to cart</Button></Link>
                     </Card>
                 
                 })
