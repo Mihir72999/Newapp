@@ -120,7 +120,8 @@ router.push('/')
 
       </div>
       <div className="cart_add"><p>availablity: <strong>{moredata.availableQty}</strong><span>in Stoke</span></p><div className='cart_add_Qty'><Remove style={{cursor:'pointer' , border:'1px solid rgb(110, 107, 107)' ,scale:'1.2'}}   onClick={()=>setQty(qty > 1 ? qty - 1 : qty)}/><b>{qty}</b><Add style={{cursor:'pointer', border:'0.5px solid rgb(110, 107, 107)',scale:'1.2'}} onClick={()=>setQty(moredata.availableQty > qty ? qty + 1 : moredata.availableQty)} /></div></div>
-      <Button className={Style.button} style={{ margin:'5px 0', borderRadius:'20px 20px 20px 20px',background: "#c6e2ff"}} onClick={()=>handleClick({ brand , image , amount , _id ,name, select ,availableQty , qty})}  color='primary'   variant='outlined'>Add To Cart</Button>
+           <div className={Style.button}> <Button  style={{ margin:'5px 0', borderRadius:'20px 20px 20px 20px',background: "#c6e2ff"}} onClick={()=>handleClick({ brand , image , amount , _id ,name, select ,availableQty , qty})}  color='primary'   variant='outlined'>Add To Cart</Button></div>
+
       </div>
       </div>
       <div className={Style.bottom}>
