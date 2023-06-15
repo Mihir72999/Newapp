@@ -15,8 +15,9 @@ const actionSlice = createSlice({
   initialState,
   reducers: {
     addProduct(state, action) {
-     const itemExist = state.cart.findIndex(e=>e.select === action.payload._id)
+     const itemExist = state.cart.findIndex(e=>e._id === action.payload._id)
      if(itemExist >= 0 ) {
+       state[itemExist].select += `<p>=></p> ${action.payload.select}`
        toast.warn(`${action.payload.select} already exist`)
      }else{
        state.cart.push(action.payload)
