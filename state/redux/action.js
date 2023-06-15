@@ -17,7 +17,8 @@ const actionSlice = createSlice({
     addProduct(state, action) {
      const itemExist = state.cart.findIndex(e=>e._id === action.payload._id)
      if(itemExist >= 0 ) {
-       state.cart[itemExist].select += `<p>-><p>${action.payload.select}`
+       state.cart[itemExist].qty +=  state.cart[itemExist].qty + 1
+       state.carr[itemExist].price += state.cart[itemExist].price * state.cart[itemExist].qty
        toast.warn(`${action.payload.select} already exist`)
      }else{
        state.cart.push(action.payload)
